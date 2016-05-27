@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans>
+	<bean name="user" class="com.test.spring.bean.User">
+		<property name="name" value="test123"></property>
+		<property name="value" value="123"></property>
+	</bean>
+	
+	<bean name="employee" class="com.test.spring.bean.Employee" scope="prototype">
+		<property name="user" ref="user"></property>
+	</bean>
+	
+	
+	<bean name="group" class="com.test.spring.bean.Group" scope="prototype">
+		<property name="employee" ref="employee"></property>
+	</bean>
+	
+</beans>
